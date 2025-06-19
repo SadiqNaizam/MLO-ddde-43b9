@@ -64,10 +64,14 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', /* Will now be 0.25rem */
+				md: 'calc(var(--radius) - 0.125rem)', /* Adjusted for smaller base radius, e.g., 2px */
+				sm: 'calc(var(--radius) - 0.1875rem)' /* Adjusted for smaller base radius, e.g., 1px or 0px if radius is small */
 			},
+			fontFamily: {
+        sans: ['var(--font-body)', 'system-ui'], // Updated to use --font-body as primary sans
+        heading: ['var(--font-heading)', 'system-ui'], // Added custom heading font
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
